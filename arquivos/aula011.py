@@ -4,7 +4,7 @@
 # 3. * / // % conta de multi, divi e seus derivados
 # 4. + - conta de adição e multiplicação
 
-conta = 1 + 1 ** 5 + 5  # 1 + 1^5 + 5 = 7
+conta = 1 + 1 ** 5 + 5  # 1 + 1 elevado (^) a 5 + 5 = 7
 print(conta)
 
 conta_1 = (1 + (0.5 + 0.5)) ** 5 + 5  # 1 + 1.0^5 + 5 = 37
