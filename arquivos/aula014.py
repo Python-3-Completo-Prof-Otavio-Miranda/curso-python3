@@ -14,9 +14,9 @@ print(formato)
 
 # exemplos abaixo serão com parâmetros nomeados
 # e no mesmo código as variáveis mudam de valor, algo não recomendado
-a = 'Magno'
+a = 'Magno e'
 b = 'Neusa'
-c = 'Vão casar'
+c = 'Vão se casar'
 
 string = 'a= {nome1} b= {nome2} c= {nome3}'
 formato = string.format(nome1=a, nome2=b, nome3=c)
