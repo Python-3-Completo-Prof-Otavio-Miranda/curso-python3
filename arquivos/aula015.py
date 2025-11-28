@@ -1,24 +1,18 @@
-# Formatação de strings com o método format (f)
-a = 'AAAAA'
-b = 'BBBBBB'
-c = 1.1
+# Usando a função input para coletar dados do usuário
 
-string = 'a= {} -> b= {} c= {}'  # sem índices
-formato = string.format(a, b, c)
-print(formato)
+# nome = input('Qual o seu nome? ')
+# print(f'O seu nome é {nome}')
 
-string = 'a= {0} -> b= {1} c= {2:.2f}'  # com índices
-formato = string.format(a, b, c)
-print(formato)
+# tentando corrigir de str para int mas não é recomendável
+# numero_1 = int(input('Insira um número: '))
+# numero_2 = int(input('Insira outro número: '))
+# print(f'A soma dos números é: {numero_1 + numero_2}')
 
+numero_1 = input('Insira um número: ')
+numero_2 = input('Insira outro número: ')
 
-# exemplos abaixo serão com parâmetros nomeados
-# e no mesmo código as variáveis mudam de valor, algo não recomendado
-a = 'Magno e'
-b = 'Neusa'
-c = 'Vão se casar'
+# Forma correta neste momento do curso
+int_numero_1 = int(numero_1)
+int_numero_2 = int(numero_2)
 
-string = 'a= {nome1} b= {nome2} c= {nome3}'
-formato = string.format(nome1=a, nome2=b, nome3=c)
-
-print(formato)
+print(f'A soma dos números é: {int_numero_1 + int_numero_2}')
