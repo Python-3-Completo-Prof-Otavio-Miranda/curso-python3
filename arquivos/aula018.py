@@ -1,12 +1,12 @@
-# Introdução ao Debugger do VS Code e o interpretador do Python lendo os códigos
+# Entendendo o Debugger do VS Code e o interpretador do Python lendo os códigos
 
 # if / elif      / else
 # se / se não se / se não
 
 condicao1 = False
 condicao2 = False
-condicao3 = False
-condicao4 = False
+condicao3 = True
+condicao4 = True
 
 # entendendo as estruturas condicionais
 if condicao1:
