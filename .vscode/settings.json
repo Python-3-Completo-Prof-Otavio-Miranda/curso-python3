@@ -23,9 +23,9 @@
     // Trava global de formatação (Segurança para seus outros projetos)
     "editor.formatOnSave": false,
 
-    // --- 🚀 CODE RUNNER (Padrão da Aula) ---
+    // --- 🚀 CODE RUNNER (Padrão da Aula + Espaço no Final) ---
     "code-runner.executorMap": {
-        "python": "clear ; python -u"
+        "python": "clear ; python -u $fullFileName ; echo ''"
     },
     "code-runner.runInTerminal": true,
     "code-runner.ignoreSelection": true,
