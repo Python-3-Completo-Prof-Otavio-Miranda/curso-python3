@@ -1,83 +1,20 @@
 {
-    // --- 🎨 APARÊNCIA (Seu conforto visual mantido) ---
+    // --- 🎨 APARÊNCIA (Mesmo padrão visual) ---
     "window.zoomLevel": 1,
     "editor.fontSize": 18,
     "workbench.colorTheme": "Sweet Dracula",
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.startupEditor": "none",
-    "terminal.integrated.keyboard.dispatch": "keyCode",
-    
-    // Réguas visuais que o professor pediu (ajuda a manter o código organizado)
-    "editor.rulers": [80, 120],
-    
-    // Fontes de programador (Lista do professor)
-    "editor.fontFamily": "'Fira Code', Consolas, 'Dank Mono', 'Source Code Pro', 'Fira Code', Menlo, 'Inconsolata', 'Droid Sans Mono', 'DejaVu Sans Mono', 'Ubuntu Mono', 'Courier New', Courier, Monaco, monospace",
+    "terminal.integrated.fontSize": 18,
+
+    // Fontes
+    "editor.fontFamily": "'Fira Code', Consolas, 'Dank Mono', 'Source Code Pro', monospace",
     "editor.fontLigatures": false,
 
-    // --- 🛠️ COMPORTAMENTO GERAL ---
-    "explorer.compactFolders": false,
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "editor.hover.enabled": true,
-    
-    // Trava global de formatação (Segurança para seus outros projetos)
-    "editor.formatOnSave": false,
+    // --- 🚀 FULL STACK / SENAI ---
+    // O Terminal Padrão aqui é o GIT BASH
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
 
-    // --- 🚀 CODE RUNNER (Padrão da Aula + Espaço no Final) ---
-    "code-runner.executorMap": {
-        "python": "clear ; python -u $fullFileName ; echo ''"
-    },
-    "code-runner.runInTerminal": true,
-    "code-runner.ignoreSelection": true,
-
-    // --- 🐍 PYTHON (Configuração RIGOROSA do Professor) ---
-    // Estas configurações só valem para arquivos .py
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.autopep8",
-        "editor.tabSize": 4,
-        "editor.insertSpaces": true,
-        // Aqui ativamos a formatação automática SÓ para Python, como o professor quer
-        "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-            "source.fixAll": "explicit",
-            "source.organizeImports": "explicit"
-        }
-    },
-
-    // Configurações avançadas de análise do Python (Linting)
-    "python.languageServer": "Pylance",
-    "python.analysis.typeCheckingMode": "basic",
-    
-    // Regras de formatação (PEP8 - Padrão Python)
-    "python.formatting.autopep8Args": [
-        "--indent-size=4",
-        "--max-line-length=80"
-    ],
-    
-    // Verificadores de erros (Flake8 e MyPy)
-    "python.linting.flake8Enabled": true,
-    "python.linting.flake8Args": [],
-    "python.linting.mypyEnabled": true,
-    
-    // Testes
-    "python.testing.unittestEnabled": false,
-    "python.testing.pytestEnabled": true,
-
-    // Ignorar erros chatos do Pylance que o professor desativou
-    "python.analysis.diagnosticSeverityOverrides": {
-        "reportUnknownMemberType": "none",
-        "reportUnknownArgumentType": "none",
-        "reportUnknownVariableType": "none",
-        "reportUnknownLambdaType": "none",
-        "reportUnknownParameterType": "none"
-    },
-
-    // Corretor Ortográfico (cSpell)
-    "cSpell.enabled": true,
-
-    // --- 💻 TERMINAIS (Sua configuração robusta) ---
-    "terminal.integrated.defaultProfile.windows": "PowerShell",
-    "terminal.integrated.fontSize": 18, // Ajustei para 18 para combinar com seu editor
+    // --- 💻 PERFIS DE TERMINAL ---
     "terminal.integrated.profiles.windows": {
         "PowerShell": {
             "source": "PowerShell",
@@ -86,20 +23,18 @@
         "Git Bash": {
             "path": ["C:\\Program Files\\Git\\bin\\bash.exe"],
             "icon": "terminal-bash"
-        },
-        "Command Prompt": {
-            "path": ["${env:windir}\\System32\\cmd.exe"],
-            "args": [],
-            "icon": "terminal-cmd"
         }
     },
 
-    // --- 🐙 OUTROS ---
-    "git.openRepositoryInParentFolders": "always",
-    "git.autofetch": true,
+    // --- COMPORTAMENTO GERAL ---
+    "editor.rulers": [80, 120],
+    "explorer.compactFolders": false,
+    "editor.formatOnSave": true, // Útil para HTML/CSS/JS
+    "cSpell.enabled": true,
     "liveServer.settings.donotShowInfoMsg": true,
-    "diffEditor.ignoreTrimWhitespace": false,
+    
+    // Configurações do Git
+    "git.autofetch": true,
     "git.enableSmartCommit": true,
-    "git.ignoreRebaseWarning": true,
     "git.confirmSync": false
 }
