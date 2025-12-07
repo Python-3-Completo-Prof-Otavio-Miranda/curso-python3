@@ -1,6 +1,5 @@
 {
-    // --- 🎨 APARÊNCIA (Seu conforto visual mantido) ---
-    // Ignorei o Zoom 2 e Fonte 24 do professor (é para projetor)
+    // --- 🎨 APARÊNCIA (Visual limpo mantido) ---
     "window.zoomLevel": 1,
     "editor.fontSize": 18,
     "workbench.colorTheme": "Sweet Dracula",
@@ -11,7 +10,7 @@
     "editor.fontFamily": "'Fira Code', Consolas, 'Dank Mono', 'Source Code Pro', monospace",
     "editor.fontLigatures": false,
 
-    // --- 💻 TERMINAL (Travado no PowerShell para este curso) ---
+    // --- 💻 TERMINAL (Travado no PowerShell para Code Runner funcionar certo) ---
     "terminal.integrated.defaultProfile.windows": "PowerShell",
     "terminal.integrated.profiles.windows": {
         "PowerShell": {
@@ -24,7 +23,15 @@
         }
     },
 
-    // --- 🐍 PYTHON (Regras do Professor + Suas correções) ---
+    // --- 🏃 CODE RUNNER (Igual ao do Professor) ---
+    "code-runner.runInTerminal": true, // OBRIGA a rodar no PowerShell
+    "code-runner.ignoreSelection": true,
+    "code-runner.executorMap": {
+        // Comando exato: Limpa a tela (clear) e roda o Python sem buffer (-u)
+        "python": "clear ; python -u \"$fullFileName\""
+    },
+
+    // --- 🐍 PYTHON (Regras e Correções do Professor) ---
     "[python]": {
         "editor.defaultFormatter": "ms-python.autopep8",
         "editor.tabSize": 4,
@@ -33,24 +40,14 @@
         "editor.codeActionsOnSave": {
             "source.fixAll": "explicit",
             "source.organizeImports": "explicit"
-            // Adicionei a limpeza de imports que ele pediu, mas via 'explicit' que é mais seguro
         }
     },
 
-    // --- 🛠️ FERRAMENTAS E LINTING (Exigências do Professor) ---
-    
-    // Code Runner
-    "code-runner.executorMap": {
-        "python": "clear ; python -u $fullFileName ; echo ''"
-    },
-    "code-runner.runInTerminal": true,
-    "code-runner.ignoreSelection": true,
-
-    // Análise (Pylance)
+    // --- 🛠️ LINTING E ANÁLISE (Exigências do Professor) ---
     "python.languageServer": "Pylance",
     "python.analysis.typeCheckingMode": "basic",
     
-    // Regras para ignorar erros chatos (Pedido do Professor)
+    // Lista de "Ignorar Erros" que o professor pediu
     "python.analysis.diagnosticSeverityOverrides": {
         "reportUnknownMemberType": "none",
         "reportUnknownArgumentType": "none",
@@ -59,12 +56,10 @@
         "reportUnknownParameterType": "none"
     },
 
-    // Formatadores e Verificadores Extras
+    // Ferramentas de verificação
     "python.formatting.autopep8Args": ["--indent-size=4", "--max-line-length=80"],
-    
     "python.linting.flake8Enabled": true,
-    "python.linting.flake8Args": [], // Mantive vazio pois ele comentou os ignores dele
-    
+    "python.linting.flake8Args": [], 
     "python.linting.mypyEnabled": true,
     
     // Testes
